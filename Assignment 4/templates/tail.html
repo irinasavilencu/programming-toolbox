@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tail</title>
+</head>
+<body>
+<h2>View the last n rows of the dataset</h2>
+    <form method="post">
+        <label>Enter the last n rows:</label>
+        <input type="number" name="n"/>
+        <button type="submit"> Show the n rows</button>
+</form>
+<br>
+    {% if rows is not none %}
+    <table border="1">
+        <tr>
+           {% for c in rows.columns %}
+            <th>{{ c }}</th>
+            {% endfor %}
+        </tr>
+        {% for index, row in rows.iterrows() %}
+        <tr>
+            {% for value in row %}
+            <td>{{ value }}</td>
+             {% endfor %}
+        </tr>
+         {% endfor %}
+    </table>
+{% endif %}
+
+    <br>
+  <form action="{{ url_for('home') }}">
+        <button type="submit">Back to Dashboard</button>
+    </form>
+</body>
+</html>

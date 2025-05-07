@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+  <h2>Welcome {{username}}!</h2>
+
+  <!-- Button to see dataset shape -->
+    <form action="{{ url_for('shape') }}" method="get">
+    <button type="submit">See Dataset Shape</button>
+    </form>
+    <br>
+
+    <form action="{{url_for('dtypes')}}" method="get" >
+        <button type = "submit">See data columns and types</button>
+    </form>
+    <br>
+
+    <form action="{{url_for('head')}}" >
+      <button type="submit">See the first n rows</button>
+    </form>
+    <br>
+
+   <form action="{{url_for('tail')}}" >
+   <button type= "submit">Show the last n rows</button>
+  </form>
+   <br>
+  <form action="{{url_for('describe')}}">
+      <button type=" submit">Show statistics</button>
+  </form>
+  <br>
+
+  <form action="{{url_for('predict')}}">
+      <button type="submit">Show prediction salary</button>
+  </form>
+  <br>
+
+<a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
+
