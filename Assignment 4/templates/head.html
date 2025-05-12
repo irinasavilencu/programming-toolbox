@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>View first n rows</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/templates.css') }}">
 </head>
+
 <body>
-    <h2>View first n rows of the dataset</h2>
-    <form method="post">
-        <label>Enter the first n rows:</label>
-        <input type="number" name="n"/>
-        <button type="submit"> Show the n rows</button>
+    <h2 class="title">View first n rows of the dataset</h2>
+    <form method="post" class="form-group">
+        <div class="form-input">
+            <label>Enter the first <strong>n</strong> rows:</label>
+            <input type="number" name="n" min="0" />
+        </div>
+        <button type="submit" class="button small"> Show the n rows</button>
     </form>
-<br>
+    <br>
     {% if rows is not none %}
-    <table border="1">
+    <table class="styled-table">
         <tr>
-           {% for c in rows.columns %}
+            {% for c in rows.columns %}
             <th>{{ c }}</th>
             {% endfor %}
         </tr>
@@ -23,21 +28,22 @@
         <tr>
             {% for value in row %}
             <td>{{ value }}</td>
-             {% endfor %}
+            {% endfor %}
         </tr>
-         {% endfor %}
+        {% endfor %}
     </table>
-{% endif %}
+    {% endif %}
 
     <br>
-  <form action="{{ url_for('home') }}">
-        <button type="submit">Back to Dashboard</button>
+    <form action="{{ url_for('home') }}">
+        <button type="submit" class="button">← Back to Dashboard</button>
     </form>
 </body>
+
 </html>
 <br>
 
-    </form>
+</form>
 </body>
-</html>
 
+</html>

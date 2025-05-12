@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Statistics</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/templates.css') }}">
 </head>
+
 <body>
-<h2>View the statistics data</h2>
- <table border="1">
+    <h2 class="title">View the statistics data</h2>
+    <table class="styled-table">
         <tr>
             <th>Statistics</th>
-           {% for c in statistics.columns%}
+            {% for c in statistics.columns%}
             <th>{{ c }}</th>
             {% endfor %}
         </tr>
@@ -19,16 +22,18 @@
             </td>
             {% for value in row %}
             <td>{{ value }}</td>
-             {% endfor %}
+            {% endfor %}
         </tr>
-         {% endfor %}
+        {% endfor %}
     </table>
 
     <br>
-  <form action="{{ url_for('home') }}">
-        <button type="submit">Back to Dashboard</button>
+    <form action="{{ url_for('home') }}">
+        <button type="submit" class="button">← Back to Dashboard</button>
     </form>
 </body>
+
 </html>
 </body>
+
 </html>

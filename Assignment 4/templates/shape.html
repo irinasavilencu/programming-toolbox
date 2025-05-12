@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Shape</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/templates.css') }}">
 </head>
-<body>
-<h2>Shape</h2>
-<h3>The dataset has {{rows}} rows and {{columns}} columns
-</h3>
 
-<form action="{{ url_for('home') }}">
- <button type="submit">Back to Dashboard</button>
-</form>
+<body>
+    <h2 class="title">Shape</h2>
+    <h3>The dataset has <strong class="text-bold">{{rows}} rows</strong> and <strong class="text-bold">{{columns}}
+            columns</strong>
+    </h3>
+
+    <form action="{{ url_for('home') }}">
+        <button type="submit" class="button">
+            ← Back to Dashboard
+        </button>
+    </form>
 
 </body>
+
 </html>

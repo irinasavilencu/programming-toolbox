@@ -1,0 +1,112 @@
+body {
+    background-color: #EDE8F5;
+    font-family: Arial, sans-serif;
+    color: #3D52A0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #3d52a0b6;
+    margin-top: 40px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: medium;
+    color: #3D52A0;
+    margin: 0;
+}
+
+.text-bold{
+    font-weight: 900;
+    color: #3D52A0;
+}
+
+.button {
+    background-color: #3D52A0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+
+    width: 250px;
+
+    &:hover {
+        background-color: #2c3e50;
+    }
+}
+
+.button.small{
+    padding: 5px 10px;
+    font-size: 14px;
+    width: 100%;
+}
+
+input {
+    padding: 4px 8px;
+    border: 1px solid #3D52A0;
+    border-radius: 4px;
+
+    &:focus, input:active{ 
+        border-color: #f5803c;
+        outline: none;
+    }
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* table styling */
+.styled-table {
+  width: 100%;
+  max-width: 500px;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.styled-table thead th {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.styled-table tbody tr {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody td {
+  padding: 12px 16px;
+  color: #333;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.styled-table tbody tr th {
+  text-align: left;
+  padding: 16px 0 16px 16px;
+}
